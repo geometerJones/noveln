@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <base href="/">
+    <title>noveln</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <!-- 1. Load libraries -->
+     <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="node_modules/css-element-queries/src/ResizeSensor.js"></script>
+    <!-- 3. Configure socket.io -->
+    <!-- <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      window.onload = function() {
+        var form = document.getElementById('messager');
+        console.log(form);
+        form.onsubmit = function() {
+          var elem = document.getElementById('m');
+          socket.emit('chat message', elem.value);
+          console.log(elem.value);
+          elem.value = '';
+          return false;
+        };
+      };
+      socket.on('chat message', (msg) => {
+        var p = document.createElement('div');
+        p.innerHTML = msg;
+        document.getElementById('messages').appendChild(p);
+      });
+    </script>
+    <script src="//cdn.auth0.com/js/lock-9.1.min.js"></script> -->
+  </head>
+  <!-- 4. Display the application -->
+  <body>
+    <my-app>brooding...</my-app>
+    <!--
+    <div id="messages"></div>
+    <form id="messager" action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+    -->
+  </body>
+</html>
